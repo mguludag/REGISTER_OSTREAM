@@ -1,7 +1,7 @@
 # REGISTER_OSTREAM
 A simple macro for overloading ostream operator in classes
 
-[Show in action](https://godbolt.org/z/n1oMrsMd6)
+[Show in action](https://godbolt.org/z/Wq3TW9K5E)
 
 ```C++
 #include <iostream>
