@@ -3,8 +3,8 @@
 #include <ostream>
 #include "macro_utils.h"
 
-#define NAME_SEPERATOR  ":"
-#define VAR_SEPERATOR   ", "
+#define NAME_SEPARATOR  ":"
+#define VAR_SEPARATOR   ", "
 #define OS_BEGIN        ": { "
 #define OS_END          " }"
 
@@ -25,99 +25,99 @@
 #define REGISTER_OSTREAM1(Class, p1)                                    \
     friend std::ostream& operator<<(std::ostream& os, Class& c) {       \
     os << #Class << OS_BEGIN                                            \
-    << #p1 << NAME_SEPERATOR << c.p1 << OS_END;                         \
+    << #p1 << NAME_SEPARATOR << c.p1 << OS_END;                         \
     return os;                                                          \
     }
 
 #define REGISTER_OSTREAM2(Class, p1, p2)                                \
     friend std::ostream& operator<<(std::ostream& os, Class& c) {       \
     os << #Class << OS_BEGIN                                            \
-    << #p1 << NAME_SEPERATOR << c.p1 << VAR_SEPERATOR                   \
-    << #p2 << NAME_SEPERATOR << c.p2 << OS_END;                         \
+    << #p1 << NAME_SEPARATOR << c.p1 << VAR_SEPARATOR                   \
+    << #p2 << NAME_SEPARATOR << c.p2 << OS_END;                         \
     return os;                                                          \
     }
 
 #define REGISTER_OSTREAM3(Class, p1, p2, p3)                            \
     friend std::ostream& operator<<(std::ostream& os, Class& c) {       \
     os << #Class << OS_BEGIN                                            \
-    << #p1 << NAME_SEPERATOR << c.p1 << VAR_SEPERATOR                   \
-    << #p2 << NAME_SEPERATOR << c.p2 << VAR_SEPERATOR                   \
-    << #p3 << NAME_SEPERATOR << c.p3 << OS_END;                         \
+    << #p1 << NAME_SEPARATOR << c.p1 << VAR_SEPARATOR                   \
+    << #p2 << NAME_SEPARATOR << c.p2 << VAR_SEPARATOR                   \
+    << #p3 << NAME_SEPARATOR << c.p3 << OS_END;                         \
     return os;                                                          \
     }
 
 #define REGISTER_OSTREAM4(Class, p1, p2, p3, p4)                        \
     friend std::ostream& operator<<(std::ostream& os, Class& c) {       \
     os << #Class << OS_BEGIN                                            \
-    << #p1 << NAME_SEPERATOR << c.p1 << VAR_SEPERATOR                   \
-    << #p2 << NAME_SEPERATOR << c.p2 << VAR_SEPERATOR                   \
-    << #p3 << NAME_SEPERATOR << c.p3 << VAR_SEPERATOR                   \
-    << #p4 << NAME_SEPERATOR << c.p4 << OS_END;                         \
+    << #p1 << NAME_SEPARATOR << c.p1 << VAR_SEPARATOR                   \
+    << #p2 << NAME_SEPARATOR << c.p2 << VAR_SEPARATOR                   \
+    << #p3 << NAME_SEPARATOR << c.p3 << VAR_SEPARATOR                   \
+    << #p4 << NAME_SEPARATOR << c.p4 << OS_END;                         \
     return os;                                                          \
     }
 
 #define REGISTER_OSTREAM5(Class, p1, p2, p3, p4, p5)                    \
     friend std::ostream& operator<<(std::ostream& os, Class& c) {       \
     os << #Class << OS_BEGIN                                            \
-    << #p1 << NAME_SEPERATOR << c.p1 << VAR_SEPERATOR                   \
-    << #p2 << NAME_SEPERATOR << c.p2 << VAR_SEPERATOR                   \
-    << #p3 << NAME_SEPERATOR << c.p3 << VAR_SEPERATOR                   \
-    << #p4 << NAME_SEPERATOR << c.p4 << VAR_SEPERATOR                   \
-    << #p5 << NAME_SEPERATOR << c.p5 << OS_END;                         \
+    << #p1 << NAME_SEPARATOR << c.p1 << VAR_SEPARATOR                   \
+    << #p2 << NAME_SEPARATOR << c.p2 << VAR_SEPARATOR                   \
+    << #p3 << NAME_SEPARATOR << c.p3 << VAR_SEPARATOR                   \
+    << #p4 << NAME_SEPARATOR << c.p4 << VAR_SEPARATOR                   \
+    << #p5 << NAME_SEPARATOR << c.p5 << OS_END;                         \
     return os;                                                          \
     }
 
 #define REGISTER_OSTREAM6(Class, p1, p2, p3, p4, p5, p6)                \
     friend std::ostream& operator<<(std::ostream& os, Class& c) {       \
     os << #Class << OS_BEGIN                                            \
-    << #p1 << NAME_SEPERATOR << c.p1 << VAR_SEPERATOR                   \
-    << #p2 << NAME_SEPERATOR << c.p2 << VAR_SEPERATOR                   \
-    << #p3 << NAME_SEPERATOR << c.p3 << VAR_SEPERATOR                   \
-    << #p4 << NAME_SEPERATOR << c.p4 << VAR_SEPERATOR                   \
-    << #p5 << NAME_SEPERATOR << c.p5 << VAR_SEPERATOR                   \
-    << #p6 << NAME_SEPERATOR << c.p6 << OS_END;                         \
+    << #p1 << NAME_SEPARATOR << c.p1 << VAR_SEPARATOR                   \
+    << #p2 << NAME_SEPARATOR << c.p2 << VAR_SEPARATOR                   \
+    << #p3 << NAME_SEPARATOR << c.p3 << VAR_SEPARATOR                   \
+    << #p4 << NAME_SEPARATOR << c.p4 << VAR_SEPARATOR                   \
+    << #p5 << NAME_SEPARATOR << c.p5 << VAR_SEPARATOR                   \
+    << #p6 << NAME_SEPARATOR << c.p6 << OS_END;                         \
     return os;                                                          \
     }
 
 #define REGISTER_OSTREAM7(Class, p1, p2, p3, p4, p5, p6, p7)            \
     friend std::ostream& operator<<(std::ostream& os, Class& c) {       \
     os << #Class << OS_BEGIN                                            \
-    << #p1 << NAME_SEPERATOR << c.p1 << VAR_SEPERATOR                   \
-    << #p2 << NAME_SEPERATOR << c.p2 << VAR_SEPERATOR                   \
-    << #p3 << NAME_SEPERATOR << c.p3 << VAR_SEPERATOR                   \
-    << #p4 << NAME_SEPERATOR << c.p4 << VAR_SEPERATOR                   \
-    << #p5 << NAME_SEPERATOR << c.p5 << VAR_SEPERATOR                   \
-    << #p6 << NAME_SEPERATOR << c.p6 << VAR_SEPERATOR                   \
-    << #p7 << NAME_SEPERATOR << c.p7 << OS_END;                         \
+    << #p1 << NAME_SEPARATOR << c.p1 << VAR_SEPARATOR                   \
+    << #p2 << NAME_SEPARATOR << c.p2 << VAR_SEPARATOR                   \
+    << #p3 << NAME_SEPARATOR << c.p3 << VAR_SEPARATOR                   \
+    << #p4 << NAME_SEPARATOR << c.p4 << VAR_SEPARATOR                   \
+    << #p5 << NAME_SEPARATOR << c.p5 << VAR_SEPARATOR                   \
+    << #p6 << NAME_SEPARATOR << c.p6 << VAR_SEPARATOR                   \
+    << #p7 << NAME_SEPARATOR << c.p7 << OS_END;                         \
     return os;                                                          \
     }
 
 #define REGISTER_OSTREAM8(Class, p1, p2, p3, p4, p5, p6, p7, p8)        \
     friend std::ostream& operator<<(std::ostream& os, Class& c) {       \
     os << #Class << OS_BEGIN                                            \
-    << #p1 << NAME_SEPERATOR << c.p1 << VAR_SEPERATOR                   \
-    << #p2 << NAME_SEPERATOR << c.p2 << VAR_SEPERATOR                   \
-    << #p3 << NAME_SEPERATOR << c.p3 << VAR_SEPERATOR                   \
-    << #p4 << NAME_SEPERATOR << c.p4 << VAR_SEPERATOR                   \
-    << #p5 << NAME_SEPERATOR << c.p5 << VAR_SEPERATOR                   \
-    << #p6 << NAME_SEPERATOR << c.p6 << VAR_SEPERATOR                   \
-    << #p7 << NAME_SEPERATOR << c.p7 << VAR_SEPERATOR                   \
-    << #p8 << NAME_SEPERATOR << c.p8 << OS_END;                         \
+    << #p1 << NAME_SEPARATOR << c.p1 << VAR_SEPARATOR                   \
+    << #p2 << NAME_SEPARATOR << c.p2 << VAR_SEPARATOR                   \
+    << #p3 << NAME_SEPARATOR << c.p3 << VAR_SEPARATOR                   \
+    << #p4 << NAME_SEPARATOR << c.p4 << VAR_SEPARATOR                   \
+    << #p5 << NAME_SEPARATOR << c.p5 << VAR_SEPARATOR                   \
+    << #p6 << NAME_SEPARATOR << c.p6 << VAR_SEPARATOR                   \
+    << #p7 << NAME_SEPARATOR << c.p7 << VAR_SEPARATOR                   \
+    << #p8 << NAME_SEPARATOR << c.p8 << OS_END;                         \
     return os;                                                          \
     }
 
 #define REGISTER_OSTREAM9(Class, p1, p2, p3, p4, p5, p6, p7, p8, p9)    \
     friend std::ostream& operator<<(std::ostream& os, Class& c) {       \
     os << #Class << OS_BEGIN                                            \
-    << #p1 << NAME_SEPERATOR << c.p1 << VAR_SEPERATOR                   \
-    << #p2 << NAME_SEPERATOR << c.p2 << VAR_SEPERATOR                   \
-    << #p3 << NAME_SEPERATOR << c.p3 << VAR_SEPERATOR                   \
-    << #p4 << NAME_SEPERATOR << c.p4 << VAR_SEPERATOR                   \
-    << #p5 << NAME_SEPERATOR << c.p5 << VAR_SEPERATOR                   \
-    << #p6 << NAME_SEPERATOR << c.p6 << VAR_SEPERATOR                   \
-    << #p7 << NAME_SEPERATOR << c.p7 << VAR_SEPERATOR                   \
-    << #p8 << NAME_SEPERATOR << c.p8 << VAR_SEPERATOR                   \
-    << #p9 << NAME_SEPERATOR << c.p9 << OS_END;                         \
+    << #p1 << NAME_SEPARATOR << c.p1 << VAR_SEPARATOR                   \
+    << #p2 << NAME_SEPARATOR << c.p2 << VAR_SEPARATOR                   \
+    << #p3 << NAME_SEPARATOR << c.p3 << VAR_SEPARATOR                   \
+    << #p4 << NAME_SEPARATOR << c.p4 << VAR_SEPARATOR                   \
+    << #p5 << NAME_SEPARATOR << c.p5 << VAR_SEPARATOR                   \
+    << #p6 << NAME_SEPARATOR << c.p6 << VAR_SEPARATOR                   \
+    << #p7 << NAME_SEPARATOR << c.p7 << VAR_SEPARATOR                   \
+    << #p8 << NAME_SEPARATOR << c.p8 << VAR_SEPARATOR                   \
+    << #p9 << NAME_SEPARATOR << c.p9 << OS_END;                         \
     return os;                                                          \
     }
 
@@ -125,16 +125,16 @@
     p10)                                                                \
     friend std::ostream& operator<<(std::ostream& os, Class& c) {       \
     os << #Class << OS_BEGIN                                            \
-    << #p1 << NAME_SEPERATOR << c.p1 << VAR_SEPERATOR                   \
-    << #p2 << NAME_SEPERATOR << c.p2 << VAR_SEPERATOR                   \
-    << #p3 << NAME_SEPERATOR << c.p3 << VAR_SEPERATOR                   \
-    << #p4 << NAME_SEPERATOR << c.p4 << VAR_SEPERATOR                   \
-    << #p5 << NAME_SEPERATOR << c.p5 << VAR_SEPERATOR                   \
-    << #p6 << NAME_SEPERATOR << c.p6 << VAR_SEPERATOR                   \
-    << #p7 << NAME_SEPERATOR << c.p7 << VAR_SEPERATOR                   \
-    << #p8 << NAME_SEPERATOR << c.p8 << VAR_SEPERATOR                   \
-    << #p9 << NAME_SEPERATOR << c.p9 << VAR_SEPERATOR                   \
-    << #p10 << NAME_SEPERATOR << c.p10 << OS_END;                       \
+    << #p1 << NAME_SEPARATOR << c.p1 << VAR_SEPARATOR                   \
+    << #p2 << NAME_SEPARATOR << c.p2 << VAR_SEPARATOR                   \
+    << #p3 << NAME_SEPARATOR << c.p3 << VAR_SEPARATOR                   \
+    << #p4 << NAME_SEPARATOR << c.p4 << VAR_SEPARATOR                   \
+    << #p5 << NAME_SEPARATOR << c.p5 << VAR_SEPARATOR                   \
+    << #p6 << NAME_SEPARATOR << c.p6 << VAR_SEPARATOR                   \
+    << #p7 << NAME_SEPARATOR << c.p7 << VAR_SEPARATOR                   \
+    << #p8 << NAME_SEPARATOR << c.p8 << VAR_SEPARATOR                   \
+    << #p9 << NAME_SEPARATOR << c.p9 << VAR_SEPARATOR                   \
+    << #p10 << NAME_SEPARATOR << c.p10 << OS_END;                       \
     return os;                                                          \
     }
 
@@ -142,17 +142,17 @@
     p10, p11)                                                           \
     friend std::ostream& operator<<(std::ostream& os, Class& c) {       \
     os << #Class << OS_BEGIN                                            \
-    << #p1 << NAME_SEPERATOR << c.p1 << VAR_SEPERATOR                   \
-    << #p2 << NAME_SEPERATOR << c.p2 << VAR_SEPERATOR                   \
-    << #p3 << NAME_SEPERATOR << c.p3 << VAR_SEPERATOR                   \
-    << #p4 << NAME_SEPERATOR << c.p4 << VAR_SEPERATOR                   \
-    << #p5 << NAME_SEPERATOR << c.p5 << VAR_SEPERATOR                   \
-    << #p6 << NAME_SEPERATOR << c.p6 << VAR_SEPERATOR                   \
-    << #p7 << NAME_SEPERATOR << c.p7 << VAR_SEPERATOR                   \
-    << #p8 << NAME_SEPERATOR << c.p8 << VAR_SEPERATOR                   \
-    << #p9 << NAME_SEPERATOR << c.p9 << VAR_SEPERATOR                   \
-    << #p10 << NAME_SEPERATOR << c.p10 << VAR_SEPERATOR                 \
-    << #p11 << NAME_SEPERATOR << c.p11 << OS_END;                       \
+    << #p1 << NAME_SEPARATOR << c.p1 << VAR_SEPARATOR                   \
+    << #p2 << NAME_SEPARATOR << c.p2 << VAR_SEPARATOR                   \
+    << #p3 << NAME_SEPARATOR << c.p3 << VAR_SEPARATOR                   \
+    << #p4 << NAME_SEPARATOR << c.p4 << VAR_SEPARATOR                   \
+    << #p5 << NAME_SEPARATOR << c.p5 << VAR_SEPARATOR                   \
+    << #p6 << NAME_SEPARATOR << c.p6 << VAR_SEPARATOR                   \
+    << #p7 << NAME_SEPARATOR << c.p7 << VAR_SEPARATOR                   \
+    << #p8 << NAME_SEPARATOR << c.p8 << VAR_SEPARATOR                   \
+    << #p9 << NAME_SEPARATOR << c.p9 << VAR_SEPARATOR                   \
+    << #p10 << NAME_SEPARATOR << c.p10 << VAR_SEPARATOR                 \
+    << #p11 << NAME_SEPARATOR << c.p11 << OS_END;                       \
     return os;                                                          \
     }
 
@@ -160,18 +160,18 @@
     p10, p11, p12)                                                      \
     friend std::ostream& operator<<(std::ostream& os, Class& c) {       \
     os << #Class << OS_BEGIN                                            \
-    << #p1 << NAME_SEPERATOR << c.p1 << VAR_SEPERATOR                   \
-    << #p2 << NAME_SEPERATOR << c.p2 << VAR_SEPERATOR                   \
-    << #p3 << NAME_SEPERATOR << c.p3 << VAR_SEPERATOR                   \
-    << #p4 << NAME_SEPERATOR << c.p4 << VAR_SEPERATOR                   \
-    << #p5 << NAME_SEPERATOR << c.p5 << VAR_SEPERATOR                   \
-    << #p6 << NAME_SEPERATOR << c.p6 << VAR_SEPERATOR                   \
-    << #p7 << NAME_SEPERATOR << c.p7 << VAR_SEPERATOR                   \
-    << #p8 << NAME_SEPERATOR << c.p8 << VAR_SEPERATOR                   \
-    << #p9 << NAME_SEPERATOR << c.p9 << VAR_SEPERATOR                   \
-    << #p10 << NAME_SEPERATOR << c.p10 << VAR_SEPERATOR                 \
-    << #p11 << NAME_SEPERATOR << c.p11 << VAR_SEPERATOR                 \
-    << #p12 << NAME_SEPERATOR << c.p12 << OS_END;                       \
+    << #p1 << NAME_SEPARATOR << c.p1 << VAR_SEPARATOR                   \
+    << #p2 << NAME_SEPARATOR << c.p2 << VAR_SEPARATOR                   \
+    << #p3 << NAME_SEPARATOR << c.p3 << VAR_SEPARATOR                   \
+    << #p4 << NAME_SEPARATOR << c.p4 << VAR_SEPARATOR                   \
+    << #p5 << NAME_SEPARATOR << c.p5 << VAR_SEPARATOR                   \
+    << #p6 << NAME_SEPARATOR << c.p6 << VAR_SEPARATOR                   \
+    << #p7 << NAME_SEPARATOR << c.p7 << VAR_SEPARATOR                   \
+    << #p8 << NAME_SEPARATOR << c.p8 << VAR_SEPARATOR                   \
+    << #p9 << NAME_SEPARATOR << c.p9 << VAR_SEPARATOR                   \
+    << #p10 << NAME_SEPARATOR << c.p10 << VAR_SEPARATOR                 \
+    << #p11 << NAME_SEPARATOR << c.p11 << VAR_SEPARATOR                 \
+    << #p12 << NAME_SEPARATOR << c.p12 << OS_END;                       \
     return os;                                                          \
     }
 
@@ -179,19 +179,19 @@
     p10, p11, p12, p13)                                                 \
     friend std::ostream& operator<<(std::ostream& os, Class& c) {       \
     os << #Class << OS_BEGIN                                            \
-    << #p1 << NAME_SEPERATOR << c.p1 << VAR_SEPERATOR                   \
-    << #p2 << NAME_SEPERATOR << c.p2 << VAR_SEPERATOR                   \
-    << #p3 << NAME_SEPERATOR << c.p3 << VAR_SEPERATOR                   \
-    << #p4 << NAME_SEPERATOR << c.p4 << VAR_SEPERATOR                   \
-    << #p5 << NAME_SEPERATOR << c.p5 << VAR_SEPERATOR                   \
-    << #p6 << NAME_SEPERATOR << c.p6 << VAR_SEPERATOR                   \
-    << #p7 << NAME_SEPERATOR << c.p7 << VAR_SEPERATOR                   \
-    << #p8 << NAME_SEPERATOR << c.p8 << VAR_SEPERATOR                   \
-    << #p9 << NAME_SEPERATOR << c.p9 << VAR_SEPERATOR                   \
-    << #p10 << NAME_SEPERATOR << c.p10 << VAR_SEPERATOR                 \
-    << #p11 << NAME_SEPERATOR << c.p11 << VAR_SEPERATOR                 \
-    << #p12 << NAME_SEPERATOR << c.p12 << VAR_SEPERATOR                 \
-    << #p13 << NAME_SEPERATOR << c.p13 << OS_END;                       \
+    << #p1 << NAME_SEPARATOR << c.p1 << VAR_SEPARATOR                   \
+    << #p2 << NAME_SEPARATOR << c.p2 << VAR_SEPARATOR                   \
+    << #p3 << NAME_SEPARATOR << c.p3 << VAR_SEPARATOR                   \
+    << #p4 << NAME_SEPARATOR << c.p4 << VAR_SEPARATOR                   \
+    << #p5 << NAME_SEPARATOR << c.p5 << VAR_SEPARATOR                   \
+    << #p6 << NAME_SEPARATOR << c.p6 << VAR_SEPARATOR                   \
+    << #p7 << NAME_SEPARATOR << c.p7 << VAR_SEPARATOR                   \
+    << #p8 << NAME_SEPARATOR << c.p8 << VAR_SEPARATOR                   \
+    << #p9 << NAME_SEPARATOR << c.p9 << VAR_SEPARATOR                   \
+    << #p10 << NAME_SEPARATOR << c.p10 << VAR_SEPARATOR                 \
+    << #p11 << NAME_SEPARATOR << c.p11 << VAR_SEPARATOR                 \
+    << #p12 << NAME_SEPARATOR << c.p12 << VAR_SEPARATOR                 \
+    << #p13 << NAME_SEPARATOR << c.p13 << OS_END;                       \
     return os;                                                          \
     }
 
@@ -199,20 +199,20 @@
     p10, p11, p12, p13, p14)                                            \
     friend std::ostream& operator<<(std::ostream& os, Class& c) {       \
     os << #Class << OS_BEGIN                                            \
-    << #p1 << NAME_SEPERATOR << c.p1 << VAR_SEPERATOR                   \
-    << #p2 << NAME_SEPERATOR << c.p2 << VAR_SEPERATOR                   \
-    << #p3 << NAME_SEPERATOR << c.p3 << VAR_SEPERATOR                   \
-    << #p4 << NAME_SEPERATOR << c.p4 << VAR_SEPERATOR                   \
-    << #p5 << NAME_SEPERATOR << c.p5 << VAR_SEPERATOR                   \
-    << #p6 << NAME_SEPERATOR << c.p6 << VAR_SEPERATOR                   \
-    << #p7 << NAME_SEPERATOR << c.p7 << VAR_SEPERATOR                   \
-    << #p8 << NAME_SEPERATOR << c.p8 << VAR_SEPERATOR                   \
-    << #p9 << NAME_SEPERATOR << c.p9 << VAR_SEPERATOR                   \
-    << #p10 << NAME_SEPERATOR << c.p10 << VAR_SEPERATOR                 \
-    << #p11 << NAME_SEPERATOR << c.p11 << VAR_SEPERATOR                 \
-    << #p12 << NAME_SEPERATOR << c.p12 << VAR_SEPERATOR                 \
-    << #p13 << NAME_SEPERATOR << c.p13 << VAR_SEPERATOR                 \
-    << #p14 << NAME_SEPERATOR << c.p14 << OS_END;                       \
+    << #p1 << NAME_SEPARATOR << c.p1 << VAR_SEPARATOR                   \
+    << #p2 << NAME_SEPARATOR << c.p2 << VAR_SEPARATOR                   \
+    << #p3 << NAME_SEPARATOR << c.p3 << VAR_SEPARATOR                   \
+    << #p4 << NAME_SEPARATOR << c.p4 << VAR_SEPARATOR                   \
+    << #p5 << NAME_SEPARATOR << c.p5 << VAR_SEPARATOR                   \
+    << #p6 << NAME_SEPARATOR << c.p6 << VAR_SEPARATOR                   \
+    << #p7 << NAME_SEPARATOR << c.p7 << VAR_SEPARATOR                   \
+    << #p8 << NAME_SEPARATOR << c.p8 << VAR_SEPARATOR                   \
+    << #p9 << NAME_SEPARATOR << c.p9 << VAR_SEPARATOR                   \
+    << #p10 << NAME_SEPARATOR << c.p10 << VAR_SEPARATOR                 \
+    << #p11 << NAME_SEPARATOR << c.p11 << VAR_SEPARATOR                 \
+    << #p12 << NAME_SEPARATOR << c.p12 << VAR_SEPARATOR                 \
+    << #p13 << NAME_SEPARATOR << c.p13 << VAR_SEPARATOR                 \
+    << #p14 << NAME_SEPARATOR << c.p14 << OS_END;                       \
     return os;                                                          \
     }
 
@@ -220,21 +220,21 @@
     p10, p11, p12, p13, p14, p15)                                       \
     friend std::ostream& operator<<(std::ostream& os, Class& c) {       \
     os << #Class << OS_BEGIN                                            \
-    << #p1 << NAME_SEPERATOR << c.p1 << VAR_SEPERATOR                   \
-    << #p2 << NAME_SEPERATOR << c.p2 << VAR_SEPERATOR                   \
-    << #p3 << NAME_SEPERATOR << c.p3 << VAR_SEPERATOR                   \
-    << #p4 << NAME_SEPERATOR << c.p4 << VAR_SEPERATOR                   \
-    << #p5 << NAME_SEPERATOR << c.p5 << VAR_SEPERATOR                   \
-    << #p6 << NAME_SEPERATOR << c.p6 << VAR_SEPERATOR                   \
-    << #p7 << NAME_SEPERATOR << c.p7 << VAR_SEPERATOR                   \
-    << #p8 << NAME_SEPERATOR << c.p8 << VAR_SEPERATOR                   \
-    << #p9 << NAME_SEPERATOR << c.p9 << VAR_SEPERATOR                   \
-    << #p10 << NAME_SEPERATOR << c.p10 << VAR_SEPERATOR                 \
-    << #p11 << NAME_SEPERATOR << c.p11 << VAR_SEPERATOR                 \
-    << #p12 << NAME_SEPERATOR << c.p12 << VAR_SEPERATOR                 \
-    << #p13 << NAME_SEPERATOR << c.p13 << VAR_SEPERATOR                 \
-    << #p14 << NAME_SEPERATOR << c.p14 << VAR_SEPERATOR                 \
-    << #p15 << NAME_SEPERATOR << c.p15 << OS_END;                       \
+    << #p1 << NAME_SEPARATOR << c.p1 << VAR_SEPARATOR                   \
+    << #p2 << NAME_SEPARATOR << c.p2 << VAR_SEPARATOR                   \
+    << #p3 << NAME_SEPARATOR << c.p3 << VAR_SEPARATOR                   \
+    << #p4 << NAME_SEPARATOR << c.p4 << VAR_SEPARATOR                   \
+    << #p5 << NAME_SEPARATOR << c.p5 << VAR_SEPARATOR                   \
+    << #p6 << NAME_SEPARATOR << c.p6 << VAR_SEPARATOR                   \
+    << #p7 << NAME_SEPARATOR << c.p7 << VAR_SEPARATOR                   \
+    << #p8 << NAME_SEPARATOR << c.p8 << VAR_SEPARATOR                   \
+    << #p9 << NAME_SEPARATOR << c.p9 << VAR_SEPARATOR                   \
+    << #p10 << NAME_SEPARATOR << c.p10 << VAR_SEPARATOR                 \
+    << #p11 << NAME_SEPARATOR << c.p11 << VAR_SEPARATOR                 \
+    << #p12 << NAME_SEPARATOR << c.p12 << VAR_SEPARATOR                 \
+    << #p13 << NAME_SEPARATOR << c.p13 << VAR_SEPARATOR                 \
+    << #p14 << NAME_SEPARATOR << c.p14 << VAR_SEPARATOR                 \
+    << #p15 << NAME_SEPARATOR << c.p15 << OS_END;                       \
     return os;                                                          \
     }
 
@@ -242,22 +242,22 @@
     p10, p11, p12, p13, p14, p15, p16)                                  \
     friend std::ostream& operator<<(std::ostream& os, Class& c) {       \
     os << #Class << OS_BEGIN                                            \
-    << #p1 << NAME_SEPERATOR << c.p1 << VAR_SEPERATOR                   \
-    << #p2 << NAME_SEPERATOR << c.p2 << VAR_SEPERATOR                   \
-    << #p3 << NAME_SEPERATOR << c.p3 << VAR_SEPERATOR                   \
-    << #p4 << NAME_SEPERATOR << c.p4 << VAR_SEPERATOR                   \
-    << #p5 << NAME_SEPERATOR << c.p5 << VAR_SEPERATOR                   \
-    << #p6 << NAME_SEPERATOR << c.p6 << VAR_SEPERATOR                   \
-    << #p7 << NAME_SEPERATOR << c.p7 << VAR_SEPERATOR                   \
-    << #p8 << NAME_SEPERATOR << c.p8 << VAR_SEPERATOR                   \
-    << #p9 << NAME_SEPERATOR << c.p9 << VAR_SEPERATOR                   \
-    << #p10 << NAME_SEPERATOR << c.p10 << VAR_SEPERATOR                 \
-    << #p11 << NAME_SEPERATOR << c.p11 << VAR_SEPERATOR                 \
-    << #p12 << NAME_SEPERATOR << c.p12 << VAR_SEPERATOR                 \
-    << #p13 << NAME_SEPERATOR << c.p13 << VAR_SEPERATOR                 \
-    << #p14 << NAME_SEPERATOR << c.p14 << VAR_SEPERATOR                 \
-    << #p15 << NAME_SEPERATOR << c.p15 << VAR_SEPERATOR                 \
-    << #p16 << NAME_SEPERATOR << c.p16 << OS_END;                       \
+    << #p1 << NAME_SEPARATOR << c.p1 << VAR_SEPARATOR                   \
+    << #p2 << NAME_SEPARATOR << c.p2 << VAR_SEPARATOR                   \
+    << #p3 << NAME_SEPARATOR << c.p3 << VAR_SEPARATOR                   \
+    << #p4 << NAME_SEPARATOR << c.p4 << VAR_SEPARATOR                   \
+    << #p5 << NAME_SEPARATOR << c.p5 << VAR_SEPARATOR                   \
+    << #p6 << NAME_SEPARATOR << c.p6 << VAR_SEPARATOR                   \
+    << #p7 << NAME_SEPARATOR << c.p7 << VAR_SEPARATOR                   \
+    << #p8 << NAME_SEPARATOR << c.p8 << VAR_SEPARATOR                   \
+    << #p9 << NAME_SEPARATOR << c.p9 << VAR_SEPARATOR                   \
+    << #p10 << NAME_SEPARATOR << c.p10 << VAR_SEPARATOR                 \
+    << #p11 << NAME_SEPARATOR << c.p11 << VAR_SEPARATOR                 \
+    << #p12 << NAME_SEPARATOR << c.p12 << VAR_SEPARATOR                 \
+    << #p13 << NAME_SEPARATOR << c.p13 << VAR_SEPARATOR                 \
+    << #p14 << NAME_SEPARATOR << c.p14 << VAR_SEPARATOR                 \
+    << #p15 << NAME_SEPARATOR << c.p15 << VAR_SEPARATOR                 \
+    << #p16 << NAME_SEPARATOR << c.p16 << OS_END;                       \
     return os;                                                          \
     }
 
@@ -265,23 +265,23 @@
     p10, p11, p12, p13, p14, p15, p16, p17)                             \
     friend std::ostream& operator<<(std::ostream& os, Class& c) {       \
     os << #Class << OS_BEGIN                                            \
-    << #p1 << NAME_SEPERATOR << c.p1 << VAR_SEPERATOR                   \
-    << #p2 << NAME_SEPERATOR << c.p2 << VAR_SEPERATOR                   \
-    << #p3 << NAME_SEPERATOR << c.p3 << VAR_SEPERATOR                   \
-    << #p4 << NAME_SEPERATOR << c.p4 << VAR_SEPERATOR                   \
-    << #p5 << NAME_SEPERATOR << c.p5 << VAR_SEPERATOR                   \
-    << #p6 << NAME_SEPERATOR << c.p6 << VAR_SEPERATOR                   \
-    << #p7 << NAME_SEPERATOR << c.p7 << VAR_SEPERATOR                   \
-    << #p8 << NAME_SEPERATOR << c.p8 << VAR_SEPERATOR                   \
-    << #p9 << NAME_SEPERATOR << c.p9 << VAR_SEPERATOR                   \
-    << #p10 << NAME_SEPERATOR << c.p10 << VAR_SEPERATOR                 \
-    << #p11 << NAME_SEPERATOR << c.p11 << VAR_SEPERATOR                 \
-    << #p12 << NAME_SEPERATOR << c.p12 << VAR_SEPERATOR                 \
-    << #p13 << NAME_SEPERATOR << c.p13 << VAR_SEPERATOR                 \
-    << #p14 << NAME_SEPERATOR << c.p14 << VAR_SEPERATOR                 \
-    << #p15 << NAME_SEPERATOR << c.p15 << VAR_SEPERATOR                 \
-    << #p16 << NAME_SEPERATOR << c.p16 << VAR_SEPERATOR                 \
-    << #p17 << NAME_SEPERATOR << c.p17 << OS_END;                       \
+    << #p1 << NAME_SEPARATOR << c.p1 << VAR_SEPARATOR                   \
+    << #p2 << NAME_SEPARATOR << c.p2 << VAR_SEPARATOR                   \
+    << #p3 << NAME_SEPARATOR << c.p3 << VAR_SEPARATOR                   \
+    << #p4 << NAME_SEPARATOR << c.p4 << VAR_SEPARATOR                   \
+    << #p5 << NAME_SEPARATOR << c.p5 << VAR_SEPARATOR                   \
+    << #p6 << NAME_SEPARATOR << c.p6 << VAR_SEPARATOR                   \
+    << #p7 << NAME_SEPARATOR << c.p7 << VAR_SEPARATOR                   \
+    << #p8 << NAME_SEPARATOR << c.p8 << VAR_SEPARATOR                   \
+    << #p9 << NAME_SEPARATOR << c.p9 << VAR_SEPARATOR                   \
+    << #p10 << NAME_SEPARATOR << c.p10 << VAR_SEPARATOR                 \
+    << #p11 << NAME_SEPARATOR << c.p11 << VAR_SEPARATOR                 \
+    << #p12 << NAME_SEPARATOR << c.p12 << VAR_SEPARATOR                 \
+    << #p13 << NAME_SEPARATOR << c.p13 << VAR_SEPARATOR                 \
+    << #p14 << NAME_SEPARATOR << c.p14 << VAR_SEPARATOR                 \
+    << #p15 << NAME_SEPARATOR << c.p15 << VAR_SEPARATOR                 \
+    << #p16 << NAME_SEPARATOR << c.p16 << VAR_SEPARATOR                 \
+    << #p17 << NAME_SEPARATOR << c.p17 << OS_END;                       \
     return os;                                                          \
     }
 
@@ -289,24 +289,24 @@
     p10, p11, p12, p13, p14, p15, p16, p17, p18)                        \
     friend std::ostream& operator<<(std::ostream& os, Class& c) {       \
     os << #Class << OS_BEGIN                                            \
-    << #p1 << NAME_SEPERATOR << c.p1 << VAR_SEPERATOR                   \
-    << #p2 << NAME_SEPERATOR << c.p2 << VAR_SEPERATOR                   \
-    << #p3 << NAME_SEPERATOR << c.p3 << VAR_SEPERATOR                   \
-    << #p4 << NAME_SEPERATOR << c.p4 << VAR_SEPERATOR                   \
-    << #p5 << NAME_SEPERATOR << c.p5 << VAR_SEPERATOR                   \
-    << #p6 << NAME_SEPERATOR << c.p6 << VAR_SEPERATOR                   \
-    << #p7 << NAME_SEPERATOR << c.p7 << VAR_SEPERATOR                   \
-    << #p8 << NAME_SEPERATOR << c.p8 << VAR_SEPERATOR                   \
-    << #p9 << NAME_SEPERATOR << c.p9 << VAR_SEPERATOR                   \
-    << #p10 << NAME_SEPERATOR << c.p10 << VAR_SEPERATOR                 \
-    << #p11 << NAME_SEPERATOR << c.p11 << VAR_SEPERATOR                 \
-    << #p12 << NAME_SEPERATOR << c.p12 << VAR_SEPERATOR                 \
-    << #p13 << NAME_SEPERATOR << c.p13 << VAR_SEPERATOR                 \
-    << #p14 << NAME_SEPERATOR << c.p14 << VAR_SEPERATOR                 \
-    << #p15 << NAME_SEPERATOR << c.p15 << VAR_SEPERATOR                 \
-    << #p16 << NAME_SEPERATOR << c.p16 << VAR_SEPERATOR                 \
-    << #p17 << NAME_SEPERATOR << c.p17 << VAR_SEPERATOR                 \
-    << #p18 << NAME_SEPERATOR << c.p18 << OS_END;                       \
+    << #p1 << NAME_SEPARATOR << c.p1 << VAR_SEPARATOR                   \
+    << #p2 << NAME_SEPARATOR << c.p2 << VAR_SEPARATOR                   \
+    << #p3 << NAME_SEPARATOR << c.p3 << VAR_SEPARATOR                   \
+    << #p4 << NAME_SEPARATOR << c.p4 << VAR_SEPARATOR                   \
+    << #p5 << NAME_SEPARATOR << c.p5 << VAR_SEPARATOR                   \
+    << #p6 << NAME_SEPARATOR << c.p6 << VAR_SEPARATOR                   \
+    << #p7 << NAME_SEPARATOR << c.p7 << VAR_SEPARATOR                   \
+    << #p8 << NAME_SEPARATOR << c.p8 << VAR_SEPARATOR                   \
+    << #p9 << NAME_SEPARATOR << c.p9 << VAR_SEPARATOR                   \
+    << #p10 << NAME_SEPARATOR << c.p10 << VAR_SEPARATOR                 \
+    << #p11 << NAME_SEPARATOR << c.p11 << VAR_SEPARATOR                 \
+    << #p12 << NAME_SEPARATOR << c.p12 << VAR_SEPARATOR                 \
+    << #p13 << NAME_SEPARATOR << c.p13 << VAR_SEPARATOR                 \
+    << #p14 << NAME_SEPARATOR << c.p14 << VAR_SEPARATOR                 \
+    << #p15 << NAME_SEPARATOR << c.p15 << VAR_SEPARATOR                 \
+    << #p16 << NAME_SEPARATOR << c.p16 << VAR_SEPARATOR                 \
+    << #p17 << NAME_SEPARATOR << c.p17 << VAR_SEPARATOR                 \
+    << #p18 << NAME_SEPARATOR << c.p18 << OS_END;                       \
     return os;                                                          \
     }
 
@@ -314,25 +314,25 @@
     p10, p11, p12, p13, p14, p15, p16, p17, p18, p19)                   \
     friend std::ostream& operator<<(std::ostream& os, Class& c) {       \
     os << #Class << OS_BEGIN                                            \
-    << #p1 << NAME_SEPERATOR << c.p1 << VAR_SEPERATOR                   \
-    << #p2 << NAME_SEPERATOR << c.p2 << VAR_SEPERATOR                   \
-    << #p3 << NAME_SEPERATOR << c.p3 << VAR_SEPERATOR                   \
-    << #p4 << NAME_SEPERATOR << c.p4 << VAR_SEPERATOR                   \
-    << #p5 << NAME_SEPERATOR << c.p5 << VAR_SEPERATOR                   \
-    << #p6 << NAME_SEPERATOR << c.p6 << VAR_SEPERATOR                   \
-    << #p7 << NAME_SEPERATOR << c.p7 << VAR_SEPERATOR                   \
-    << #p8 << NAME_SEPERATOR << c.p8 << VAR_SEPERATOR                   \
-    << #p9 << NAME_SEPERATOR << c.p9 << VAR_SEPERATOR                   \
-    << #p10 << NAME_SEPERATOR << c.p10 << VAR_SEPERATOR                 \
-    << #p11 << NAME_SEPERATOR << c.p11 << VAR_SEPERATOR                 \
-    << #p12 << NAME_SEPERATOR << c.p12 << VAR_SEPERATOR                 \
-    << #p13 << NAME_SEPERATOR << c.p13 << VAR_SEPERATOR                 \
-    << #p14 << NAME_SEPERATOR << c.p14 << VAR_SEPERATOR                 \
-    << #p15 << NAME_SEPERATOR << c.p15 << VAR_SEPERATOR                 \
-    << #p16 << NAME_SEPERATOR << c.p16 << VAR_SEPERATOR                 \
-    << #p17 << NAME_SEPERATOR << c.p17 << VAR_SEPERATOR                 \
-    << #p18 << NAME_SEPERATOR << c.p18 << VAR_SEPERATOR                 \
-    << #p19 << NAME_SEPERATOR << c.p19 << OS_END;                       \
+    << #p1 << NAME_SEPARATOR << c.p1 << VAR_SEPARATOR                   \
+    << #p2 << NAME_SEPARATOR << c.p2 << VAR_SEPARATOR                   \
+    << #p3 << NAME_SEPARATOR << c.p3 << VAR_SEPARATOR                   \
+    << #p4 << NAME_SEPARATOR << c.p4 << VAR_SEPARATOR                   \
+    << #p5 << NAME_SEPARATOR << c.p5 << VAR_SEPARATOR                   \
+    << #p6 << NAME_SEPARATOR << c.p6 << VAR_SEPARATOR                   \
+    << #p7 << NAME_SEPARATOR << c.p7 << VAR_SEPARATOR                   \
+    << #p8 << NAME_SEPARATOR << c.p8 << VAR_SEPARATOR                   \
+    << #p9 << NAME_SEPARATOR << c.p9 << VAR_SEPARATOR                   \
+    << #p10 << NAME_SEPARATOR << c.p10 << VAR_SEPARATOR                 \
+    << #p11 << NAME_SEPARATOR << c.p11 << VAR_SEPARATOR                 \
+    << #p12 << NAME_SEPARATOR << c.p12 << VAR_SEPARATOR                 \
+    << #p13 << NAME_SEPARATOR << c.p13 << VAR_SEPARATOR                 \
+    << #p14 << NAME_SEPARATOR << c.p14 << VAR_SEPARATOR                 \
+    << #p15 << NAME_SEPARATOR << c.p15 << VAR_SEPARATOR                 \
+    << #p16 << NAME_SEPARATOR << c.p16 << VAR_SEPARATOR                 \
+    << #p17 << NAME_SEPARATOR << c.p17 << VAR_SEPARATOR                 \
+    << #p18 << NAME_SEPARATOR << c.p18 << VAR_SEPARATOR                 \
+    << #p19 << NAME_SEPARATOR << c.p19 << OS_END;                       \
     return os;                                                          \
     }
 
@@ -340,26 +340,26 @@
     p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20)              \
     friend std::ostream& operator<<(std::ostream& os, Class& c) {       \
     os << #Class << OS_BEGIN                                            \
-    << #p1 << NAME_SEPERATOR << c.p1 << VAR_SEPERATOR                   \
-    << #p2 << NAME_SEPERATOR << c.p2 << VAR_SEPERATOR                   \
-    << #p3 << NAME_SEPERATOR << c.p3 << VAR_SEPERATOR                   \
-    << #p4 << NAME_SEPERATOR << c.p4 << VAR_SEPERATOR                   \
-    << #p5 << NAME_SEPERATOR << c.p5 << VAR_SEPERATOR                   \
-    << #p6 << NAME_SEPERATOR << c.p6 << VAR_SEPERATOR                   \
-    << #p7 << NAME_SEPERATOR << c.p7 << VAR_SEPERATOR                   \
-    << #p8 << NAME_SEPERATOR << c.p8 << VAR_SEPERATOR                   \
-    << #p9 << NAME_SEPERATOR << c.p9 << VAR_SEPERATOR                   \
-    << #p10 << NAME_SEPERATOR << c.p10 << VAR_SEPERATOR                 \
-    << #p11 << NAME_SEPERATOR << c.p11 << VAR_SEPERATOR                 \
-    << #p12 << NAME_SEPERATOR << c.p12 << VAR_SEPERATOR                 \
-    << #p13 << NAME_SEPERATOR << c.p13 << VAR_SEPERATOR                 \
-    << #p14 << NAME_SEPERATOR << c.p14 << VAR_SEPERATOR                 \
-    << #p15 << NAME_SEPERATOR << c.p15 << VAR_SEPERATOR                 \
-    << #p16 << NAME_SEPERATOR << c.p16 << VAR_SEPERATOR                 \
-    << #p17 << NAME_SEPERATOR << c.p17 << VAR_SEPERATOR                 \
-    << #p18 << NAME_SEPERATOR << c.p18 << VAR_SEPERATOR                 \
-    << #p19 << NAME_SEPERATOR << c.p19 << VAR_SEPERATOR                 \
-    << #p20 << NAME_SEPERATOR << c.p20 << OS_END;                       \
+    << #p1 << NAME_SEPARATOR << c.p1 << VAR_SEPARATOR                   \
+    << #p2 << NAME_SEPARATOR << c.p2 << VAR_SEPARATOR                   \
+    << #p3 << NAME_SEPARATOR << c.p3 << VAR_SEPARATOR                   \
+    << #p4 << NAME_SEPARATOR << c.p4 << VAR_SEPARATOR                   \
+    << #p5 << NAME_SEPARATOR << c.p5 << VAR_SEPARATOR                   \
+    << #p6 << NAME_SEPARATOR << c.p6 << VAR_SEPARATOR                   \
+    << #p7 << NAME_SEPARATOR << c.p7 << VAR_SEPARATOR                   \
+    << #p8 << NAME_SEPARATOR << c.p8 << VAR_SEPARATOR                   \
+    << #p9 << NAME_SEPARATOR << c.p9 << VAR_SEPARATOR                   \
+    << #p10 << NAME_SEPARATOR << c.p10 << VAR_SEPARATOR                 \
+    << #p11 << NAME_SEPARATOR << c.p11 << VAR_SEPARATOR                 \
+    << #p12 << NAME_SEPARATOR << c.p12 << VAR_SEPARATOR                 \
+    << #p13 << NAME_SEPARATOR << c.p13 << VAR_SEPARATOR                 \
+    << #p14 << NAME_SEPARATOR << c.p14 << VAR_SEPARATOR                 \
+    << #p15 << NAME_SEPARATOR << c.p15 << VAR_SEPARATOR                 \
+    << #p16 << NAME_SEPARATOR << c.p16 << VAR_SEPARATOR                 \
+    << #p17 << NAME_SEPARATOR << c.p17 << VAR_SEPARATOR                 \
+    << #p18 << NAME_SEPARATOR << c.p18 << VAR_SEPARATOR                 \
+    << #p19 << NAME_SEPARATOR << c.p19 << VAR_SEPARATOR                 \
+    << #p20 << NAME_SEPARATOR << c.p20 << OS_END;                       \
     return os;                                                          \
     }
 
